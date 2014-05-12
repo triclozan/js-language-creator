@@ -23,51 +23,55 @@
 
             <div class="row marketing">
                 <div class="col-lg-12">
-                    <!--<form role="form" id="mainForm">-->
-<!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="parserGenTab">
-                        <div class="block first">
-                            <h3>Грамматика</h3>
-                            <div class="form-group">
-                                <textarea class="form-control" id="grammar" placeholder="Введите описание грамматики" rows="32"></textarea>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="parserGenTab">
+    <p>
+    Load an example:
+    <select id="examples">
+      <option value="jison/calculator.jison" selected="true">Calculator</option>
+      <option value="jison/lambdacalc.jison">Lambda Calculus</option>
+      <!--<option value="ansic.jison">ANSI C</option>-->
+    </select>
+    </p>
+                            <div class="block first">
+                                <h3>Грамматика</h3>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="grammar" placeholder="Введите описание грамматики" rows="32"></textarea>
+                                </div>
+                                <button id="process_btn" class="btn btn-default">Генерировать парсер</button>
+                                <button id="download_btn" class="btn btn-default" disabled="disabled">Скачать скрипт</button>
                             </div>
-                            <button id="process_btn" class="btn btn-default">Генерировать парсер</button>
-                            <button id="download_btn" class="btn btn-default" disabled="disabled">Скачать скрипт</button>
-                        </div>
 
-                        <div class="block">
-                            <h3>Результат генерации парсера</h3>
-                            <div class="alert alert-info pre_wrapper">
-                                <pre id="gen_out">Парсер еще не генерировался</pre>
+                            <div class="block">
+                                <h3>Результат генерации парсера</h3>
+                                <div class="alert alert-info pre_wrapper">
+                                    <pre id="gen_out">Парсер еще не генерировался</pre>
+                                </div>
                             </div>
                         </div>
-  </div>
-  <div class="tab-pane" id="scriptRunTab">
-                        <div class="block">
-                            <h3>Скрипт для запуска в парсере</h3>
-                            <div class="form-group">
-                                <textarea class="form-control" id="source" placeholder="Enter script" rows="32"></textarea>
+                        <div class="tab-pane" id="scriptRunTab">
+                            <div class="block first">
+                                <h3>Скрипт для запуска в парсере</h3>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="source" placeholder="Enter script" rows="32"></textarea>
+                                </div>
+                                <button id="parse_btn" class="btn btn-default" disabled="disabled">Запустить скрипт</button>
                             </div>
-                            <button id="parse_btn" class="btn btn-default" disabled="disabled">Запустить скрипт</button>
+
+                            <div class="block">
+                                <h3>Результат запуска скрипта</h3>
+                                <div class="alert alert-info pre_wrapper">
+                                    <pre id="out">Сначала сгенерируйте парсер</pre>
+                                </div>
+                            </div>      
                         </div>
-
-                        <div class="block">
-                            <h3>Результат запуска скрипта</h3>
-                            <div class="alert alert-info pre_wrapper">
-                                <pre id="out">Сначала сгенерируйте парсер</pre>
-                            </div>
-                        </div>      
-  </div>
-  <div class="tab-pane" id="tasks">
-      <ol><li>1</li><li>2</li><li>3</li></ol>
-  </div>
-</div>
-
-                    <!--</form>-->
+                        <div class="tab-pane" id="tasks">
+                            <ol><li>1</li><li>2</li><li>3</li></ol>
+                        </div>
+                    </div>
                 </div>
             </div>
-
+        </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/codemirror.js"></script>
@@ -77,5 +81,5 @@
         <script src="js/es5.js"></script>
         <script src="js/jison.js"></script>
         <script src="js/main.js"></script>
-</body>
+    </body>
 </html>
