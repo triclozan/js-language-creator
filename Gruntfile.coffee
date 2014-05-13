@@ -16,11 +16,16 @@ module.exports = (grunt) ->
     connect:
       server:
         options:
+          middleware: (connect, options, middlewares) ->
+            middlewares.push((req, res, next) ->
+              if (req.url.replace(/\?.*$/, '') != '/hello/world') 
+                return next()
+              console.log 
+              res.end req.url.replace(/^.*?\?/, '')
+            )
+            return middlewares
           port: 9000
           keepalive: true
-          #open: true
-          #base: '.'
-          #hostname: 'localhost'
 
   grunt.loadNpmTasks 'grunt-jison'
   grunt.loadNpmTasks 'grunt-contrib-watch'
