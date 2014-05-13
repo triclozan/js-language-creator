@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('../fonts/PTSerif'), local('PTSerif-Regular'), url(http://themes.googleusercontent.com/static/fonts/ptserif/v6/zjBCKJs0bE-LvM0teIV5VPesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  src: local('../fonts/PTSerif_bold'), local('PTSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/ptserif/v6/QABk9IxT-LFTJ_dQzv7xpGOb2gHztoQeulij-1lvl-8.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('../fonts/PTSerif_italic'), local('PTSerif-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptserif/v6/3Nwg9VzlwLXPq3fNKwVRMBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: local('../fonts/PTSerif_bold_italic'), local('PTSerif-Italic'), url(http://themes.googleusercontent.com/static/fonts/ptserif/v6/3Nwg9VzlwLXPq3fNKwVRMBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -6,6 +31,7 @@
 
 /* Space out content a bit */
 body {
+  font-family: 'PT Serif', serif;
   padding-top: 20px;
   padding-bottom: 20px; }
 
@@ -64,6 +90,11 @@ pre,.CodeMirror pre,.CodeMirror,textarea {
 .alert.pre_wrapper {
   margin-bottom: 0;
   padding: 5px 10px;
+}
+
+#examples {
+  margin-top: 15px; 
+  font-size: 16px;
 }
 
 .linedwrap {

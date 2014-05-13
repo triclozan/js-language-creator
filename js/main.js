@@ -30,13 +30,9 @@ $(document).ready(function () {
         lineNumbers: true
     });
 
-    var file = $("#examples").val();
-    $.get(file, function (data) {
-        grammarEditor.setValue(data);
-    });
-
-    $("#examples").change(function(ev) {
-        var file = this.options[this.selectedIndex].value;
+    $("#examples ul a").click(function(e) {
+        e.preventDefault();
+        var file = $(this).attr('href');
         $.get(file, function (data) {
             grammarEditor.setValue(data);
         });
